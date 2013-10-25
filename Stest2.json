@@ -1,0 +1,56 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://cws.staging.t-mobileatwork.com/pbx/login?partner=tmus&lang=en_us"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "username"
+      },
+      "text": "gtetw20+100@gmail.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "password"
+      },
+      "text": "mytest20+100"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "submitLogin"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "#chMySettings > div.navtitle"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "h1"
+      }
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": "h1"
+      },
+      "text": "My Settings"
+    }
+  ]
+}
